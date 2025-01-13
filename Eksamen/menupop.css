@@ -1,0 +1,33 @@
+*{
+    list-style: none;
+    
+}
+
+.menubod{
+    background-color: #008f51;
+}
+
+
+.menu {
+    color:black;
+    font-family: "Frank Ruhl Libre", serif;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.menu-item button{
+    order:1;
+    }
+    
+    .menu-item{
+        width:100%;
+        text-align:center;
+        order:3;
+    }
+.hr{
+    order:2;
+    border-bottom:5px solid black;
+}
