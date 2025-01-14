@@ -93,7 +93,24 @@
             <h1>See our <br>partnering farms</h1>
         </div>
         <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253000.1744988068!2d10.026054382324231!3d60.303739691269804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4641a30c3be67c59%3A0x94dbad789ad47bba!2sBraastad%20Gaard!5e0!3m2!1sno!2sno!4v1736686949930!5m2!1sno!2sno" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+<div id="googleMap" style="width:100%;height:400px;"></div>
+
+<script>
+function myMap() {
+  var mapProp = {
+    center:new google.maps.LatLng(60.303748,10.636326),
+    zoom: 4,
+  };
+    var map= new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    
+}
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLBHmej4fkpbbpGyRXgL93n-oK8JihiUY&callback=myMap"></script>
+
+
 
         </div>
     </section>

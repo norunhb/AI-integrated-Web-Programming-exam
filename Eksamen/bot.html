@@ -43,19 +43,20 @@
   
 <div class="chat-container">
    
-    <div class="chat-box">
+    <div class="chat-box-container">
         <div class="chat-message">
             <div class="chat-message-text">What can I help you with today?</div>
 
         </div>
     </div>
-    <form onsubmit = {handleSubmit}>
-      <label ClassName="font-bold">Say something</label>
-        <input type="text" placeholder="Ask me any questions" required/>
-        <button>Send</button>
-        </form>
+    <div class="chat-input">
+      <div class="chat-box" id="chat-box"></div>
+      <input type="text" id="user-input" placeholder = "Type in your question here..." required>
+        <button id="send-button">Send</button>
+
+      
     </div>
-  </div>
+</div>
 
 </body>
 </html>
