@@ -9,32 +9,18 @@
   }
   
   body {
-    background: #ffffff;
+
     margin: 0px;
+    background-image: url('heroimg.jpg');
+    height:100vh;
+    background-size:cover;
+    background-position:center;
+    width:100%;
+    display:block;
+    
   }
 
-  .off-screen-menu{
-    background-color: #008f51;
-    height: 70vh;
-    width: 100%;
-    max-width: 450px;
-    position: fixed;
-    top:0;
-    right: -450px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 3rem;
-    transition: .3s ease;
-  }
-
-  .off-screen-menu.active{
-    left:0;
-
-  }
-
+  
   .navbar{
     display:flex;
     flex-direction: row;
@@ -95,43 +81,29 @@
 
   }
 
-  .ham-menu span:hover{
-    opacity: 40%;
-
+  .h5{
+    display:flex;
+    color:black;
+    margin-top: 10px;
+    margin-left:auto;
+    
   }
 
-  .ham-menu span:nth-child(1){
-    top:25%;
-  }
 
-  .ham-menu span:nth-child(3){
-    top:75%;
-  }
-
-  ham-menu.active span:nth-child(1){
-    top:50%;
-    transform: translate(-50%, -50%)rotate(45deg)
-  }
-
-  ham-menu.active span:nth-child(2){
-    opacity: 0;
-  }
-  ham-menu.active span:nth-child(3){
-    top:50%;
-    transform: translate(-50%, 50%)rotate(-45deg)
-  }
-
-  .chat-container{
-    width:50%;
-    height:auto;
+  .chatcontainer{
+    width:40%;
+    height:60%;
     margin:50px auto;
-    background-color: #ffffff;
     align-items: center;
+    border-radius:16px;
   }
 
   .chat-box-container{
     height:100%;
     padding:10px;
+    background-color:#ffffff;
+    border-radius: 16px 16px 0px 0px;
+    
 
   }
 
@@ -142,23 +114,38 @@
     display:flex;
     flex-direction: column;
     align-items: left;
+    
   }
 
   .chat-message-text{
     background-color:#F7F2DE;
     padding:10px;
+    margin-left:25px;
     border-radius: 10px;
     max-width:60%;
 
   }
 
-  .chat-input{
+  .chat-message-text-out{
+    background-color:#e1eaf0;
+    padding:10px;
+    margin-left:25px;
+    border-radius: 10px;
+    margin-top: 10px;
+
+  }
+
+
+  .chat-container{
     display:flex;
     align-items:center;
     padding:10px;
+    background-color: #ffffff;
+    border-radius: 0px 0px 16px 16px;
   }
 
-  .chat-input input{
+  
+  .message-input{
     flex-grow:1;
     padding:10px;
     border-radius:10px;
@@ -166,15 +153,14 @@
     outline: none;
     border:none;
 
-    
   }
 
 
-  .chat-input button{
+  .sendButton{
     background-color: #dc4131;
     border-radius: 10px;
     border:none;
     outline:none;
     padding:10px;
-    margin: 10px;
+
   }

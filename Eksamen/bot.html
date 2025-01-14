@@ -14,14 +14,7 @@
 </head>
 <body>
 <header>
-    <div class="off-screen-menu">
-        <ul>
-          <li>products</li>
-          <li>chat</li>
-          <li>checkout</li>
-        </ul>
-      </div>
-
+   
       <div class="navbar">
 
       <nav>
@@ -41,21 +34,24 @@
    
 </header>
   
-<div class="chat-container">
-   
+<div class="chatcontainer">
+
     <div class="chat-box-container">
         <div class="chat-message">
+          <h5>Fram</h5>
             <div class="chat-message-text">What can I help you with today?</div>
-
+            <div class="chat-message-text-out">I want to know more about the farms you work with. How did you end up partnering for this service?</div>
         </div>
     </div>
-    <div class="chat-input">
-      <div class="chat-box" id="chat-box"></div>
-      <input type="text" id="user-input" placeholder = "Type in your question here..." required>
-        <button id="send-button">Send</button>
+    <div class="chat-container">
+      <div id="messages"></div>
+      <div id="input-container">
+      <input type="text" id="message-input" class="message-input" placeholder = "Type in your question here..." required>
+        <button id="sendButton" class="sendButton" >Send</button>
 
       
     </div>
+</div>
 </div>
 
 </body>

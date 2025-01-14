@@ -1,45 +1,32 @@
 
-const hamMenu = document.querySelector('.ham-menu');
-const offScreenMenu = document.querySelector('.off-screen-menu');
+const messagesDiv = document.getElementById('messages');
+const messageInput = document.getElementById('message-input');
+const sendButton = document.getElementById('send-button');
 
-hamMenu.addEventListener('click',()=>{
-    hamMenu.classList.toggle('active');
-    offScreenMenu.classList.toggle('active');
-})
+function addMessage(content, sender) {
+    const messageElement = document.createElement('div');
+    messageElement.textContent = content;
+    messageElement.classList.add('message', sender);
+    messagesDiv.appendChild(messageElement);
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;}
 
+function sendMessage() {
+    const message = messageInput.calue.trim();
+    if (message) {
+        addMessage(message, 'user');
+        messageInput.value ='';
 
-const openai = new OpenAI({
-    apiKey:''
+        setTimeout(() => {
+            const botReply = 'Bot svarer:"${message}"';
+            addMessage (botReply, 'bot');
+            
+        },1000) 
+    }
+    
+}sendButton.addEventListener('click', sendMessage);
 
-});
-
-async function generateText(prompt) {
-    const response = await openai.completions.created({
-        model: "gpt-3.5"
-        prompt:prompt
-    })
-    return response.choices [0].text;
-}
-
-const form= document.getElementById('chat-container')
-
-form.addEventListener("submit", handleSubmit);
-
-export async function GET (request) {
-    const configuration = new configuration({
-          apiKey: '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'
-function handleSubmit(event){
-    event.preventDefault();
-    const userInput=document.getElementById('user-input').value;
-   
-
-    const inputs= document.querySelectorAll'user-input');
-
-    inputs.array.forEach(input => {
-        input.value=''
-    });
-}
-
-
-
-
+messageInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      sendMessage();
+    }
+  });
